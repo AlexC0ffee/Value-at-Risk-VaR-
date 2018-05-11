@@ -1,5 +1,5 @@
 # Value-at-Risk
-# Some code related to the VaR methodology.
+# Some code related to the VaR methodology. Welecome to criticize if anything can be better.
 The VaR_RollingWIndows.py include the Normal Distribution Method, Exponential Weighted Moving Average Method and Historical Simulation Method for calculate the Value at Risk with rolling windows.
 The function can be import and use directly.
 
