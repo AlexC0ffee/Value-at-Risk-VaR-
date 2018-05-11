@@ -8,4 +8,4 @@ EWMAVaR(Returns,Confidence_Level,First_Windows,Decay_Factors)\
 HSVaR(Returns,Confidence_Level,First_Windows)
 # Expected Shortfall (Conditional Value at Risk)
 CVaR(Returns,VaR)
-## The Returns should be a n*1 vector or DataFrame, it will be much convenience for later to set the index as timestame. 
+### The Returns should be a n*1 vector or DataFrame, it will be much convenience for later to set the index as timestame. 
