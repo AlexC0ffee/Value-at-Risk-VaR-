@@ -27,7 +27,7 @@ RC_3(Returns,VaR)
 FC_1(Returns,VaR)
 FC_2(Returns,VaR)
 FC_3(Returns,VaR)
-###### Quantile Loss Function
+##### Quantile Loss Function
 QL(Returns, VaR, ConfidenceLevel)
 ### Expected Shortfall (Conditional Value at Risk)
 #### CVaR.py
