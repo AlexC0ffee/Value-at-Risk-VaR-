@@ -230,3 +230,23 @@ def FC_3(Returns,VaR):
         FC_3.append(quadratic)
         FC_3_Score = np.sum(FC_3)
     return FC_3_Score
+
+#==============================================================================
+  # Quantile Loss Function
+  # Reference: The Use of GARCH Models in VaR Estimation.
+  # Defined as QL
+  # Ql(Returns, Value at Risk, Condidence Level of VaR)
+#==============================================================================
+def QL(Returns,VaR,ConfidenceLevel):
+    Time = len(Returns)
+    First_Windows = Time - len(VaR)
+    Compare = pd.concat([Returns[First_Windows:],-VaR],axis=1)
+    QL = []
+    for i in range(len(VaR)):
+        if Compare.T.iloc[0][i] < Compare.T.iloc[1][i]:
+            QuantileLoss = (Compare.T.iloc[0][i]-Compare.T.iloc[1][i])**2
+        else:
+            QuantileLoss = (Compare.T.iloc[0][-i-1:].quantile(1-ConfidenceLevel)-Compare.T.iloc[1][i])**2
+        QL.append(QuantileLoss)
+        QL_Score = np.sum(QL)
+    return QL_Score  
