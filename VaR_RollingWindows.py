@@ -1,7 +1,7 @@
 #==============================================================================
   #Normal Distribution Method for Value at Risk
   #The 1-Head VaR calculation based on the Equal Weigted standard deviation
-  #Use rolling windows by setting the first 1000th observations as 1st window
+  #Use rolling windows by setting the first n observations as 1st window
   #Defined as NormalVaR
 #==============================================================================
 import numpy as np
@@ -20,7 +20,7 @@ def NormalVaR(Returns,Confidence_Level,First_Windows):
 #==============================================================================
   #Exponential Weighted Moving Average Method for Value at Risk
   #The 1-Head VaR calculation based on the EWMA standard deviation
-  #Use rolling windows by setting the first 1000th observations as 1st window
+  #Use rolling windows by setting the first n observations as 1st window
   #Defined as EWMAlVaR
 #==============================================================================
 def EWMAVaR(Returns,Confidence_Level, First_Windows, Decay_Factors):
@@ -36,7 +36,7 @@ def EWMAVaR(Returns,Confidence_Level, First_Windows, Decay_Factors):
 #==============================================================================
   #Historical Simulation Method for Value at Risk
   #The 1-Head VaR calculation based on the Historical Simulation Method
-  #Use rolling windows by setting the first 1000th observations as 1st window
+  #Use rolling windows by setting the first n observations as 1st window
   #Defined as HSVaR
 #==============================================================================
 def HSVaR(Returns,Confidence_Level,First_Windows):
