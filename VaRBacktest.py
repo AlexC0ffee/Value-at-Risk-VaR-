@@ -45,7 +45,7 @@ def LRCCI(Returns,VaR):
     LRCC = pd.concat([Returns[First_Windows:],-VaR],axis=1)
     TF=LRCC.T.iloc[0]>LRCC.T.iloc[1]
     n00=0
-    n10=1
+    n10=0
     n01=0
     n11=0
     for i in range(len(TF)-1):
@@ -110,7 +110,7 @@ def RL(Returns,VaR):
         RL_Score = np.sum(RL)
     return RL_Score        
 #==============================================================================
-  # Linear (RQ)
+  # Quadratic (RQ)
   # Defined as RQ
   # RQ(Returns, Value at Risk)
 #==============================================================================
