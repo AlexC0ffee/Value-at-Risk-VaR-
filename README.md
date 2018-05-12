@@ -23,11 +23,11 @@ RQ(Returns,VaR)
 RC_1(Returns,VaR)
 RC_2(Returns,VaR)
 RC_3(Returns,VaR)
-##### Firm's Loss Function Family include Caporin_1(FC_1), Caporin_2(FC_2), Caporin_3(FC_3).
+###### Firm's Loss Function Family include Caporin_1(FC_1), Caporin_2(FC_2), Caporin_3(FC_3).
 FC_1(Returns,VaR)
 FC_2(Returns,VaR)
 FC_3(Returns,VaR)
-#### Quantile Loss Function
+###### Quantile Loss Function
 QL(Returns, VaR, ConfidenceLevel)
 ### Expected Shortfall (Conditional Value at Risk)
 #### CVaR.py
